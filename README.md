@@ -65,7 +65,7 @@ Travis CI allows you to configure the runner VM with a variety of [services](htt
 
 Lines 5 through 7 set the [branches](https://config.travis-ci.com/ref/job/branches) attribute to tell Travis CI to use the code in the master branch of the cloned repository. You can set Travis CI to process specific branches in a given repo, but in this case, the code I’m interested in unit testing is in the master branch.
 
-Lines 8 through 14 are where Deno support is implemented. I add the command line tasks required to download Deno. Once downloaded, the task will install Deno and then check that Deno is running. This is all defined under the `before_install` attribute, which indicates the stage before installation in the [Travis CI job lifecycle].(https://docs.travis-ci.com/user/job-lifecycle) The install stage is the time when all dependencies are installed, so in this case, I am telling Travis CI to install Deno before any other download and configuration happens.
+Lines 8 through 14 are where Deno support is implemented. I add the command line tasks required to download Deno. Once downloaded, the task will install Deno and then check that Deno is running. This is all defined under the `before_install` attribute, which indicates the stage before installation in the [Travis CI job lifecycle](https://docs.travis-ci.com/user/job-lifecycle). The install stage is the time when all dependencies are installed, so in this case, I am telling Travis CI to install Deno before any other download and configuration happens.
 
 Line 9 tells Travis CI to output the present working directory [(pwd)](https://en.wikipedia.org/wiki/Pwd). I do this to provide debugging information that might be useful later.
 
