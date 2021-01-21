@@ -73,11 +73,25 @@ Line 10 runs the `curl` command that downloads and executes the shell (sh) scrip
 
 Line 11 lists the contents of the .deno directory. I do this to provide debugging information. When the Deno installation is run, it creates a .deno directory in the user’s `$HOME` directory where the Deno binaries and dependencies are stored.
 
-Line 12 creates an environment variable, `DENO_INSTAL`L, which describes the location of the Deno binary and dependencies.
+Line 12 creates an environment variable, `DENO_INSTALL` which describes the location of the Deno binary and dependencies.
 
 Line 14 runs the simple “Hello World” Deno application, which is downloaded directly from the Deno home site. I do this just to confirm that Deno is up and running properly.
 
 Lines 15 through19 run the unit tests for the various subjects that are part of my main projects. (See figure 2, below.)
+
+![Figure2](figure2.png)
+> Figure 2: An excerpt from the console output created with travis.yml running my project’s unit tests
+
+That’s it. As you can see, I got Deno up and running under Travis CI using a trivial amount of code in the `.travis.yml` file. Being able to do so much with such a small amount of code attests to the power that Travis CI brings to the CI/CD experience.
+
+You can view the code for this Deno project on GitHub [here](https://github.com/reselbob/denodemo).
+
+## Join the initiative
+Travis CI provides the power and flexibility to make just about any CI/CD workflow possible. The platform’s versatility is reason enough for enterprises to consider adopting it. But when it comes to running Deno under Travis CI, there’s more!
+
+Travis CI supports implementing [ommunity-based languages](https://docs.travis-ci.com/user/languages/community-supported-languages). Thus, it’s entirely possible to get Deno incorporated into the array of languages that Travis CI supports once the [infrastructure](https://docs.travis-ci.com/user/languages/community-supported-languages#adding-a-new-language) is in place. All that’s required is for three members of the Deno community to commit to becoming maintainers and keeping the language support active. That being said, I am actively looking for people who want to become maintainers. 
+
+Making Deno work out of the box with Travis CI is a win-win for all parties. If you’re interested, [contact me on LinkedIn](https://www.linkedin.com/in/bobreselman). It will be a great adventure, and the result of our endeavor will benefit many for years to come.
 
 
 
