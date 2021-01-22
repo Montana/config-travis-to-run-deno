@@ -1,5 +1,24 @@
 # Configuring Travis CI to Run a Deno Project 
 
+---
+title: "Configuring Travis CI to Run a Deno Project"
+created_at: Friday 22 Jan 2021 15:00:00 EDT
+author: Montana Mendy
+layout: post
+permalink: 2021-01-20-rundeno
+category: news
+excerpt_separator: <!-- more --> 
+tags:
+  - news
+  - feature
+  - infrastructure
+  - community
+---
+
+Nothing lasts forever in the world of ephemeral computing. It’s the nature of the beast. Today, more companies are maximizing their IT budgets by practicing the principles of infrastructure as code (IaC). They’re creating and destroying virtual assets on demand in order to meet the needs of the moment. 
+
+![Header](images/rundeno.png)
+
 I am a big fan of Deno. I am also a big fan of Travis CI. What’s not to like? Deno is a powerful new programming framework that picks up where Node.js left off. Travis CI is a CI/CD platform that integrates easily with the projects stored in my GitHub repo. They’re both very cool.
 
 But there’s a problem: Travis CI does not support Deno out of the box.
@@ -92,17 +111,3 @@ Travis CI provides the power and flexibility to make just about any CI/CD workfl
 Travis CI supports implementing [community-based languages](https://docs.travis-ci.com/user/languages/community-supported-languages). Thus, it’s entirely possible to get Deno incorporated into the array of languages that Travis CI supports once the [infrastructure](https://docs.travis-ci.com/user/languages/community-supported-languages#adding-a-new-language) is in place. All that’s required is for three members of the Deno community to commit to becoming maintainers and keeping the language support active. That being said, I am actively looking for people who want to become maintainers. 
 
 Making Deno work out of the box with Travis CI is a win-win for all parties. If you’re interested, [contact me on LinkedIn](https://www.linkedin.com/in/bobreselman). It will be a great adventure, and the result of our endeavor will benefit many for years to come.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
