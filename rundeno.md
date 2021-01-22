@@ -3,7 +3,7 @@ title: "Configuring Travis CI to Run a Deno Project"
 created_at: Friday 22 Jan 2021 15:00:00 EDT
 author: Montana Mendy
 layout: post
-permalink: 2021-01-20-rundeno
+permalink: 2021-01-22-rundeno
 category: news
 excerpt_separator: <!-- more --> 
 tags:
@@ -13,9 +13,13 @@ tags:
   - community
 ---
 
+![Header](images/rundeno.png)
+
 Nothing lasts forever in the world of ephemeral computing. It’s the nature of the beast. Today, more companies are maximizing their IT budgets by practicing the principles of infrastructure as code (IaC). They’re creating and destroying virtual assets on demand in order to meet the needs of the moment. 
 
-![Header](images/rundeno.png)
+<!-- more --> 
+
+# Getting started 
 
 I am a big fan of Deno. I am also a big fan of Travis CI. What’s not to like? Deno is a powerful new programming framework that picks up where Node.js left off. Travis CI is a CI/CD platform that integrates easily with the projects stored in my GitHub repo. They’re both very cool.
 
@@ -32,7 +36,7 @@ The signup process asks you to declare repositories on the source code managemen
 
 Travis CI will clone the contents of that repo into a virtual machine instance running in the Travis CI domain. Once the runner VM has the contents of the cloned repository, it will look for a special file named travis.yml that contains instructions for provisioning the VM and about tasks to perform once the runner VM is provisioned. Figure 1 below describes the process.
 
-![Flowchart](figure-01.png)
+![Flowchart](images/figure1deno.png)
 > Figure 1: The Travis CI Workflow
 
 As you can see in callout 1 above, the first step in the workflow process is that a developer commits updated code to the repository of interest in the SCM service running in the cloud. A webhook in the repository “sees” the commit and emits an event message that is captured by Travis CI, as shown at callout 2. Travis CI clones the repository’s code into a VM in its domain and then looks for the `.travis.yml` file in the cloned files. The `.travis.yml` file is identified, and the configuration and instructions in `.travis.yml` are executed, as shown at callout 3.
@@ -96,7 +100,7 @@ Line 14 runs the simple “Hello World” Deno application, which is downloaded 
 
 Lines 15 through19 run the unit tests for the various subjects that are part of my main projects. (See figure 2, below.)
 
-![Figure2](figure2.png)
+![Figure2](images/figure2deno.png)
 > Figure 2: An excerpt from the console output created with travis.yml running my project’s unit tests
 
 That’s it. As you can see, I got Deno up and running under Travis CI using a trivial amount of code in the `.travis.yml` file. Being able to do so much with such a small amount of code attests to the power that Travis CI brings to the CI/CD experience.
