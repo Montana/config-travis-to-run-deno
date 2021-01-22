@@ -1,5 +1,3 @@
-# Configuring Travis CI to Run a Deno Project 
-
 ---
 title: "Configuring Travis CI to Run a Deno Project"
 created_at: Friday 22 Jan 2021 15:00:00 EDT
